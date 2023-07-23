@@ -25,7 +25,8 @@ function App() {
   }; 
  
   function divide(e) { 
-    // Add the code for the divide function 
+    e.preventDefault(e);
+    setResult((result) => result / Number(inputRef.current.value));
   };
  
   function resetInput(e) { 
@@ -54,7 +55,7 @@ function App() {
         <button onClick={plus}>add</button> 
         <button onClick={minus}>subtract</button>
         <button onClick={times}>multiply</button>
-        {/* Add the divide button */} 
+        <button onClick={divide}>divide</button>
         {/* Add the resetInput button */} 
         {/* Add the resetResult button */} 
       </form> 
