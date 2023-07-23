@@ -20,7 +20,8 @@ function App() {
   };
  
   function times(e) { 
-    // Add the code for the plus function 
+    e.preventDefault(e);
+    setResult((result) => result * Number(inputRef.current.value));
   }; 
  
   function divide(e) { 
@@ -52,7 +53,7 @@ function App() {
         /> 
         <button onClick={plus}>add</button> 
         <button onClick={minus}>subtract</button>
-        {/* Add the multiply button */} 
+        <button onClick={times}>multiply</button>
         {/* Add the divide button */} 
         {/* Add the resetInput button */} 
         {/* Add the resetResult button */} 
