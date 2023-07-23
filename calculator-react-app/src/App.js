@@ -15,7 +15,8 @@ function App() {
   }; 
  
   function minus(e) { 
-  	// Add the code for the minus function 
+    e.preventDefault(e);
+    setResult((result) => result - Number(inputRef.current.value));
   };
  
   function times(e) { 
@@ -50,7 +51,7 @@ function App() {
           placeholder="Type a number" 
         /> 
         <button onClick={plus}>add</button> 
-        {/* Add the subtract button */} 
+        <button onClick={minus}>subtract</button>
         {/* Add the multiply button */} 
         {/* Add the divide button */} 
         {/* Add the resetInput button */} 
