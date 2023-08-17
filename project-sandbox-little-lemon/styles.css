@@ -3,12 +3,13 @@ body {
     font-family: 'Markazi Text', serif;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    margin-left: 5%;
+    margin-left: 0%;
     margin-right: 5%;
 }
 
 h1 {
     font-size: 3rem;
+    margin-left: 5%;
 }
 
 h2 {
@@ -19,16 +20,31 @@ header > img {
     display: block;
     margin-left:auto;
     margin-right: auto;
+    padding-top: 3rem;
     width: 40rem;
+
 }
 
-nav ul {
-    list-style: none;
+.navbar {
+    overflow: hidden;
+    background-color: #49796B;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color:  #EDEFEE;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-nav li {
-    display: inline-block;
+.navbar a:hover {
+background: #c8102E;
+color:#EDEFEE
 }
 
 section {
