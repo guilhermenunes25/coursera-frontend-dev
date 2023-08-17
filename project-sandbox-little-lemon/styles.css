@@ -22,7 +22,6 @@ header > img {
     margin-right: auto;
     padding-top: 3rem;
     width: 40rem;
-
 }
 
 .navbar {
@@ -40,11 +39,12 @@ header > img {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .navbar a:hover {
 background: #c8102E;
-color:#EDEFEE
+color: #FFC72C;
 }
 
 section {
