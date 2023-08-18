@@ -7,50 +7,7 @@ body {
     margin-right: 5%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-left: 5%;
-    color:#49796B;
-    font-family: 'Lobster', cursive;
-}
-
-
-
- .sub-heading {
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1.5rem;
-}
-
-h1, .sub-heading {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-h2 {
-    font-size: 2rem;
-    font-family: 'Lobster', cursive;
-    color: #c8102E;
-}
-
-header > img {
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    padding-top: 3rem;
-    width: 40rem;
-}
+/*Navbar section*/
 
 .navbar {
     overflow: hidden;
@@ -74,6 +31,69 @@ header > img {
 background: #c8102E;
 color: #FFC72C;
 }
+
+/*Main heading and sub-heading*/
+
+header > img {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    width: 40rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 5%;
+    color:#49796B;
+    font-family: 'Lobster', cursive;
+}
+
+ .sub-heading {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+h1, .sub-heading {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Cards section*/
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    color: #c8102E;
+}
+
+
+
+
 
 section {
     display: flex;
