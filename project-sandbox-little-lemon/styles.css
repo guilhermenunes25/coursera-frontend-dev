@@ -40,6 +40,8 @@ h1, .sub-heading {
 
 h2 {
     font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    color: #c8102E;
 }
 
 header > img {
