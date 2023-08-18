@@ -13,6 +13,17 @@ h1 {
     margin-left: 5%;
     color:#49796B;
     font-family: 'Lobster', cursive;
+}
+
+
+
+ .sub-heading {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+h1, .sub-heading {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
