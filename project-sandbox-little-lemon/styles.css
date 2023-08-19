@@ -127,6 +127,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    transition: 0.8s;
 }
 
 button:hover {
