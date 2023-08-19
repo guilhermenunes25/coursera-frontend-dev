@@ -205,6 +205,21 @@ footer {
     justify-content: flex-start; /* Align text to the left */
 }
 
+@media screen and (max-width: 767px) {
+    .footer-column {
+        text-align: center; 
+        justify-content: center; 
+    }
+    
+    .footer-column img {
+        margin: 0 auto 10px; 
+    }
+    
+    .footer-column p {
+        text-align: center; 
+    }
+}
+
 
 section {
     display: flex;
