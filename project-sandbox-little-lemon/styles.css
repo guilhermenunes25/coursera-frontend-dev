@@ -100,6 +100,9 @@ h1, .sub-heading, header > img {
     box-sizing: border-box;
     width: calc(33.33% - 50px);
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 10px;
     height: 100%;
 
@@ -128,6 +131,7 @@ h2 {
 button {
     background-color: #c8102E;
     border: none;
+    border-radius: 25px;
     color: #EDEFEE;
     padding: 10px 20px;
     text-align: center;
@@ -136,6 +140,7 @@ button {
     font-size: 18px;
     transition: 0.8s;
     font-family: 'Pangolin', cursive;
+    align-self: center;
 }
 
 button:hover {
@@ -171,14 +176,7 @@ footer {
     font-size: 14px;
 }
 
-.footer-column:first-child {
-    justify-content: flex-end; /* Align logo to the right */
-}
 
-/* Adjust text alignment */
-.footer-column:last-child {
-    justify-content: flex-start; /* Align text to the left */
-}
 
 /* Media queries for responsive design */
 
