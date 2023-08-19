@@ -85,23 +85,23 @@ h1, .sub-heading, header > img {
 /*Cards style*/
 
 .container {
-    padding: 10px 20px;
-    margin: 0 auto;
     display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     box-sizing: border-box;
-    width: calc(33.33% - 40px);
+    width: calc(33.33% - 50px);
     margin: 10px;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
+    height: 100%;
 
 }
 
@@ -143,31 +143,6 @@ button:hover {
     color: #EDEFEE;
     }
 
-/* Media queries for responsive design */
-
-@media screen and (max-width: 767px) {
-    header > img {
-        padding: 2rem 0;
-    }
-
-
-    .container {
-        flex-direction: column; /* Stack cards vertically */
-    }
-
-    .card {
-        box-sizing: border-box;
-        width: 100%; 
-        margin: 10px 0;
-        padding: 10px 20px; 
-    }
-
-    .card img {
-        height: auto; 
-        border-radius: 50px;
-    }
-}
-
 /*Footer style*/
 
 footer {
@@ -205,9 +180,39 @@ footer {
     justify-content: flex-start; /* Align text to the left */
 }
 
+/* Media queries for responsive design */
+
 @media screen and (max-width: 767px) {
+    header > img {
+        padding: 2rem 0;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 1200px;
+      
+    }
+
+    .card {
+        width: 100%; 
+        margin: 10px;
+        padding: 10px;
+        height: auto;
+    }
+
+    .card img {
+        height: auto; 
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
     .footer-column {
-        text-align: center; 
+        text-align: center; /* Center text and image */
         justify-content: center; 
     }
     
@@ -219,6 +224,7 @@ footer {
         text-align: center; 
     }
 }
+
 
 
 section {
