@@ -26,6 +26,8 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.2s;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
 }
 
 .navbar a:hover {
@@ -58,6 +60,11 @@ h1 {
     font-size: 1.5rem;
     padding-bottom: 2rem;
     
+}
+
+p {
+    color:#49796B;
+    font-family: 'Pangolin', cursive;
 }
 
 h1, .sub-heading, header > img {
@@ -112,6 +119,7 @@ transform: scale(1.1);
 }
 
 
+
 h2 {
     font-size: 2rem;
     font-family: 'Lobster', cursive;
@@ -126,8 +134,9 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.8s;
+    font-family: 'Pangolin', cursive;
 }
 
 button:hover {
@@ -160,6 +169,31 @@ button:hover {
     }
 }
 
+footer {
+    color:#49796B;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-column img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
 section {
     display: flex;
 }
@@ -168,9 +202,7 @@ article {
     flex: 1;
 }
 
-footer {
-    display: flex;
-}
+
 
 footer div {
     flex: 1;
