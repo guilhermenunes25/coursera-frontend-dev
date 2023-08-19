@@ -4,7 +4,7 @@ body {
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 0%;
-    margin-right: 5%;
+    margin-right: 0%;
 }
 
 /*Navbar section*/
@@ -57,7 +57,7 @@ color: #EDEFEE;
 
 .banner-section {
     position: relative;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -66,7 +66,6 @@ color: #EDEFEE;
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 25px;
     align-items: center;
     padding-right: 0%;
 }
@@ -77,7 +76,6 @@ color: #EDEFEE;
     left:0;
     width:100%;
     height: 100%;
-    border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -134,7 +132,7 @@ h1:hover {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
     padding: 10px;
 }
 
@@ -234,6 +232,21 @@ footer {
 
 
 /* Media queries for responsive design */
+@media screen and (min-width: 1200px) {
+    .navbar {
+        max-width: 100%; /* Adjust this value as needed */
+    }
+
+    .banner-section {
+        max-width: 100%; /* Keep the banner section width unchanged */
+    }
+
+    .container {
+        max-width: 100%; /* Keep the card section width unchanged */
+    }
+}
+
+
 
 @media screen and (max-width: 767px) {
     header {
