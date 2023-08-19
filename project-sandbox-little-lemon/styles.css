@@ -27,6 +27,7 @@ header {
 .navbar {
     background-color: #49796B;
     border-radius: 25px;
+    margin-bottom: 50px;
     overflow: hidden;
     position: absolute;
     top: 100%;;
@@ -56,6 +57,9 @@ color: #EDEFEE;
 
 .banner-section {
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .banner-section img {
@@ -63,6 +67,8 @@ color: #EDEFEE;
     height: auto;
     object-fit: cover;
     border-radius: 25px;
+    align-items: center;
+    padding-right: 0%;
 }
 
 .banner-overlay {
