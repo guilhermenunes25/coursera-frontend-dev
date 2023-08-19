@@ -59,13 +59,13 @@ h1 {
     vertical-align: middle;
     font-size: 1.5rem;
     padding-bottom: 2rem;
+    color:#49796B;
+    font-family: 'Pangolin', cursive;
+
     
 }
 
-p {
-    color:#49796B;
-    font-family: 'Pangolin', cursive;
-}
+
 
 h1, .sub-heading, header > img {
     animation: fadeInAnimation ease 3s;
@@ -108,9 +108,18 @@ h1, .sub-heading, header > img {
 
 }
 
+.card p {
+    color:#49796B;
+    font-family: 'Pangolin', cursive;
+    text-align: center;
+    
+}
+
+
 .card:hover {
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 transform: scale(1.1);
+background-color: #FFF8DC
 }
 
 .card img {
@@ -126,6 +135,7 @@ h2 {
     font-size: 2rem;
     font-family: 'Lobster', cursive;
     color: #c8102E;
+    text-align: center;
 }
 
 button {
