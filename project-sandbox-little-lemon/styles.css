@@ -105,6 +105,8 @@ h1, .sub-heading, header > img {
     justify-content: space-between;
     padding: 10px;
     height: 100%;
+    cursor: pointer;
+    border-radius: 25px;
 
 }
 
@@ -118,7 +120,7 @@ h1, .sub-heading, header > img {
 
 .card:hover {
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-transform: scale(1.1);
+transform: scale(1.2);
 background-color: #FFF8DC
 }
 
@@ -151,6 +153,7 @@ button {
     transition: 0.8s;
     font-family: 'Pangolin', cursive;
     align-self: center;
+    cursor: pointer;
 }
 
 button:hover {
