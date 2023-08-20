@@ -89,11 +89,12 @@ color: #EDEFEE;
     text-align: center;
     color:#EDEFEE;
     z-index: 1;
+    max-width: 80%;
 }
 
 .banner-text h1 {
     color:#EDEFEE;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -101,7 +102,7 @@ color: #EDEFEE;
 }
 
 .banner-text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 70%;
     margin: 0 auto;
     font-family: 'Pangolin', cursive;
