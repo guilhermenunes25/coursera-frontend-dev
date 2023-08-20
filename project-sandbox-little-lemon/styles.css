@@ -3,8 +3,8 @@ body {
     font-family: 'Markazi Text', serif;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /*Navbar section*/
@@ -21,15 +21,15 @@ header {
 }
 
 .logo {
-    max-width: 900px;
+    max-width: 100%;
 }
 
 .navbar {
     background-color: #49796B;
     border-radius: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 100%;;
     left: 0;
     width: 100%;
@@ -57,14 +57,15 @@ color: #EDEFEE;
 
 .banner-section {
     position: relative;
-    max-width: 1600px;
+    max-width: 100%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .banner-section img {
     width: 100%;
-    height: auto;
+    border-radius: 25px;
+    height: 300px;
     object-fit: cover;
     align-items: center;
     padding-right: 0%;
@@ -72,6 +73,7 @@ color: #EDEFEE;
 
 .banner-overlay {
     position: absolute;
+    border-radius: 25px;
     top:0;
     left:0;
     width:100%;
