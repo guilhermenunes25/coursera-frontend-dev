@@ -108,7 +108,7 @@ color: #EDEFEE;
     font-family: 'Pangolin', cursive;
 }
 
-.banner h1, .banner p {
+.banner-text h1, .banner-text p {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
