@@ -237,18 +237,17 @@ footer {
 /* Media queries for responsive design */
 @media screen and (min-width: 1200px) {
     .navbar {
-        max-width: 100%; /* Adjust this value as needed */
+        max-width: 100%; 
     }
 
     .banner-section {
-        max-width: 100%; /* Keep the banner section width unchanged */
+        max-width: 100%; 
     }
 
     .container {
-        max-width: 100%; /* Keep the card section width unchanged */
+        max-width: 100%; 
     }
 }
-
 
 
 @media screen and (max-width: 767px) {
@@ -311,14 +310,3 @@ footer {
 
 
 
-section {
-    display: flex;
-}
-
-article {
-    flex: 1;
-}
-
-footer div {
-    flex: 1;
-}
