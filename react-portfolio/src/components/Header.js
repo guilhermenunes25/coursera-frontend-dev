@@ -54,7 +54,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 style={{textDecoration: "none", color: "white"}}
                 >
-                 <FontAwesomeIcon icon={social.icon} size="lg" />
+                 <FontAwesomeIcon icon={social.icon} size="2x" />
                 </a>
               ))}
             </nav>
