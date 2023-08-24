@@ -25,3 +25,11 @@ const projects = [
         getImageSrc: () => require("../images/photo4.jpg"),
     },
 ];
+
+const ProjectsSection = () => {
+    return (
+        <FullScreenSection>
+            
+        </FullScreenSection>
+    )
+}
