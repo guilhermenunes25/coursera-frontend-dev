@@ -16,12 +16,14 @@ const Card = ({ title, description, imageSrc }) => {
         alt={title}
       />
       <VStack align="start" spacing={2}>
-        <Heading as="h3">
+        <Heading as="h3" size="md">
         {title}
         </Heading>
-      <Text fontSize="xs">{description}</Text>
+      <Text fontSize="sm">{description}</Text>
       </VStack>
-      {/* You can add the FontAwesomeIcon and other components as needed */}
+      <HStack spacing={2} mt={4}>
+      {/* add the FontAwesomeIcon and other components as needed */}
+      </HStack>
     </Box>
   );
 };
