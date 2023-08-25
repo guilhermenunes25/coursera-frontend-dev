@@ -28,12 +28,20 @@ const LandingSection = () => {
             type: 'hireMe',
             comment: '',
         },
-        onSubmit: async(values) => {},
+        onSubmit: async(values) => {
+            const response = await submit(values);
+            if (response.success) {
+                onOpen("success", "From submitted successfully!");
+                formik.resetForm();
+            }else{
+                onOpen("error", "Form submission failed!");
+            }
+        },
         validationSchema: Yup.object({
-            firstName: string().required(),
-            email: string().email('Required').required(),
-            type,
-            comment:string().required() 
+            firstName: Yup.string().required('Required'),
+            email: Yup.string().email('Invalid email address').required('Required'),
+            type: Yup.string(),
+            comment:Yup.string().required('Required').min(25, 'Must be at least 25 characters') 
 
         }),
     });
