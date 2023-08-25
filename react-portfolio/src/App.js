@@ -3,6 +3,7 @@ import { AlertProvider } from "./context/alertContext";
 import {Header} from "./components/Header"
 import './App.css';
 import LandingSection from "./components/LandingSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Header />
         <LandingSection/>
+        <ProjectsSection/>
       </main>
     </AlertProvider>
   </ChakraProvider>
