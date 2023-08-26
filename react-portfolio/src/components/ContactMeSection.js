@@ -60,13 +60,14 @@ const LandingSection = () => {
             <Box p={6} rounded="md" w="100%">
               <form>
                 <VStack spacing={4}>
-                  <FormControl isInvalid={false}>
+                  <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
                     <FormLabel htmlFor="firstName">Name</FormLabel>
                     <Input
                       id="firstName"
                       name="firstName"
+                      {...formik.getFieldProps("firstName")}
                     />
-                    <FormErrorMessage></FormErrorMessage>
+                    <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
                   </FormControl>
                   <FormControl isInvalid={false}>
                     <FormLabel htmlFor="email">Email Address</FormLabel>
