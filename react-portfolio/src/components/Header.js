@@ -2,21 +2,34 @@ import React, {useEffect, useRef} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {Box,HStack} from "@chakra-ui/react";
-import { faGithub, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons";
 
 const socials = [
-   {
-       icon: faEnvelope,
-       url: "mailto: hello@example.com",
-   },
-   {
+  {
+    icon: faEnvelope,
+    url: "mailto: hello@example.com",
+  },
+  {
     icon: faGithub,
-    url: "https://github.com"
-   },
-   {
+    url: "https://github.com",
+  },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com",
+  },
+  {
+    icon: faMedium,
+    url: "https://medium.com",
+  },
+  {
     icon: faStackOverflow,
     url: "https://stackoverflow.com",
-   },
+  },
 ];
 
 const Header = () => {
@@ -52,7 +65,7 @@ const Header = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{textDecoration: "none", color: "white"}}
+                style={{textDecoration: "none", color: "white", margin:"0 20px"}}
                 >
                  <FontAwesomeIcon icon={social.icon} size="2x" />
                 </a>
