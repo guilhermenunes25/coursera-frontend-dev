@@ -89,14 +89,16 @@ const LandingSection = () => {
                       <option value="other">Other</option>
                     </Select>
                   </FormControl>
-                  <FormControl isInvalid={false}>
+
+                  <FormControl isInvalid={formik.touched.comment && formik.errors.comment}>
                     <FormLabel htmlFor="comment">Your message</FormLabel>
                     <Textarea
                       id="comment"
                       name="comment"
                       height={250}
+                      {...formik.getFieldProps("comment")}
                     />
-                    <FormErrorMessage></FormErrorMessage>
+                    <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
                   </FormControl>
                   <Button type="submit" colorScheme="purple" width="full">
                     Submit
