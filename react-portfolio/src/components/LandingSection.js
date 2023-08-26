@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Heading, VStack, Box, StackDivider } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Text, StackDivider } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const greeting = "Hello, I am Pete!";
@@ -22,16 +22,15 @@ const LandingSection = () => (
     {greeting}
   </Heading>
     <VStack
-    divider={<StackDivider borderColor='gray.200' />}
-    spacing={4}
-    align='stretch'
+    spacing={0.1}
+    align='center'
     >
-       <Box h='40px' bg='tomato'>
-          {bio1}  
-       </Box>
-       <Box h='40px' bg='pink.100'>
-          {bio2}
-       </Box>
+      <Text fontSize="48px" fontWeight={"bold"} color="white">
+        {bio1}
+      </Text>
+      <Text fontSize="48px" fontWeight={"bold"} color="white">
+        {bio2}
+      </Text>
     </VStack>
     </FullScreenSection>
 );
