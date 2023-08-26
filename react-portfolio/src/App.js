@@ -15,6 +15,7 @@ function App() {
         <LandingSection/>
         <ProjectsSection/>
         <ContactMeSection />
+        <Footer />
       </main>
     </AlertProvider>
   </ChakraProvider>
