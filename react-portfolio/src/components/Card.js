@@ -13,6 +13,8 @@ const Card = ({ title, description, imageSrc }) => {
         h="auto"
         src={imageSrc}
         alt={title}
+        borderRadius="lg"
+        mb={4}
       />
       <VStack align="start" spacing={2}>
         <Heading as="h4" size="md" color={"black"}>
