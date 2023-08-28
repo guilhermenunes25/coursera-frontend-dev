@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {useFormik} from "formik";
 import {
     Box, 
@@ -18,32 +18,46 @@ import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
 const LandingSection = () => {
-    const {isLoading, response, submit} = useSubmit();
+    const {isLoading,submit} = useSubmit();
     const {onOpen} = useAlertContext();
+    const [submitResponse, setSubmitResponse] = useState(null);
+
+
+    useEffect(() => {
+      if (submitResponse && submitResponse.success !== undefined) {
+        if (submitResponse.success) {
+          onOpen("success", "Form submitted successfully!");
+          formik.resetForm();
+        } else {
+          onOpen("error", "Form submission failed!");
+        }
+      }
+    }, [submitResponse]);
+
 
     const formik = useFormik({
-        initialValues: {
-            firstName: '', 
-            email: '', 
-            type: 'hireMe',
-            comment: '',
-        },
-        onSubmit: async(values) => {
-            const response = await submit(values);
-            if (response.success) {
-                onOpen("success", "From submitted successfully!");
-                formik.resetForm();
-            }else{
-                onOpen("error", "Form submission failed!");
-            }
-        },
-        validationSchema: Yup.object({
-            firstName: Yup.string().required('Required'),
-            email: Yup.string().email('Invalid email address').required('Required'),
-            type: Yup.string(),
-            comment:Yup.string().required('Required').min(25, 'Must be at least 25 characters') 
-
-        }),
+      initialValues: {
+        firstName: '',
+        email: '',
+        type: 'hireMe',
+        comment: '',
+      },
+      onSubmit: async (values) => {
+        const response = await submit(values);
+        setSubmitResponse(response);
+        if (response.success) {
+          onOpen("success", "Form submitted successfully!");
+          formik.resetForm();
+        } else {
+          onOpen("error", "Form submission failed!");
+        }
+      },
+      validationSchema: Yup.object({
+        firstName: Yup.string().required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        type: Yup.string(),
+        comment: Yup.string().required('Required').min(25, 'Must be at least 25 characters'),
+      }),
     });
 
     return (
@@ -100,7 +114,7 @@ const LandingSection = () => {
                     />
                     <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
                   </FormControl>
-                  <Button type="submit" colorScheme="purple" width="full">
+                  <Button type="submit" colorScheme="purple" width="full" isLoading={isLoading}>
                     Submit
                   </Button>
                 </VStack>
