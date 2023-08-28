@@ -1,64 +1,58 @@
-import React, {useState, useEffect} from "react";
-import {useFormik} from "formik";
+import React, { useState, useEffect } from "react";
+import { useFormik } from "formik";
 import {
-    Box, 
-    Button,
-    FormControl,
-    FormErrorMessage,
-    FormLabel,
-    Heading,
-    Input,
-    Select,
-    Textarea,
-    VStack,
+  Box,
+  Button,
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+  Heading,
+  Input,
+  Select,
+  Textarea,
+  VStack,
 } from "@chakra-ui/react";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
+import { useAlertContext } from "../context/alertContext";
 
-const LandingSection = () => {
-    const {isLoading,submit} = useSubmit();
-    const {onOpen} = useAlertContext();
-    const [submitResponse, setSubmitResponse] = useState(null);
+const ContactMeSection = () => {
+  const { isLoading, submit } = useSubmit();
+  const { onOpen } = useAlertContext();
+  const [submitResponse, setSubmitResponse] = useState(null);
 
-
-    useEffect(() => {
-      if (submitResponse && submitResponse.success !== undefined) {
-        if (submitResponse.success) {
-          onOpen("success", "Form submitted successfully!");
-          formik.resetForm();
-        } else {
-          onOpen("error", "Form submission failed!");
-        }
+  useEffect(() => {
+    if (submitResponse && submitResponse.success !== undefined) {
+      if (submitResponse.success) {
+        onOpen("success", "Form submitted successfully!");
+        formik.resetForm();
+      } else {
+        onOpen("error", "Form submission failed!");
       }
-    }, [submitResponse]);
+    }
+  }, [submitResponse]);
 
-
-    const formik = useFormik({
-      initialValues: {
-        firstName: '',
-        email: '',
-        type: 'hireMe',
-        comment: '',
-      },
-      onSubmit: async (values) => {
-        const response = await submit(values);
-        setSubmitResponse(response);
-        if (response.success) {
-          onOpen("success", "Form submitted successfully!");
-          formik.resetForm();
-        } else {
-          onOpen("error", "Form submission failed!");
-        }
-      },
-      validationSchema: Yup.object({
-        firstName: Yup.string().required('Required'),
-        email: Yup.string().email('Invalid email address').required('Required'),
-        type: Yup.string(),
-        comment: Yup.string().required('Required').min(25, 'Must be at least 25 characters'),
-      }),
-    });
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      email: "",
+      type: "hireMe",
+      comment: "",
+    },
+    onSubmit: async (values) => {
+      const response = await submit(values);
+      setSubmitResponse(response);
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      type: Yup.string(),
+      comment: Yup.string()
+        .required("Required")
+        .min(25, "Must be at least 25 characters"),
+    }),
+  });
 
     return (
         <FullScreenSection
@@ -125,5 +119,5 @@ const LandingSection = () => {
       );
     };
     
-    export default LandingSection;
+    export default ContactMeSection;
     
