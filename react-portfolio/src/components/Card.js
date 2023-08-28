@@ -13,15 +13,15 @@ const Card = ({ title, description, imageSrc }) => {
         alt={title}
         borderRadius="lg"
       />
-      <Heading as="h4" size="md" color="black" ml={4}>
+      <Heading as="h4" size="1x" color="#36454F" ml={4}>
         {title}
       </Heading>
-      <Text fontSize="sm" color="black" ml={4}>
+      <Text fontSize="sm" color="#36454F" ml={4}>
         {description}
       </Text>
-      <HStack spacing={2} ml={4} mb={4}>
+      <HStack spacing={2} ml={4} mb={2}>
         <Text fontSize="sm" color="gray.600">See more</Text>
-        <FontAwesomeIcon icon={faArrowRight} size="1x"  color="black"/>
+        <FontAwesomeIcon icon={faArrowRight} size="1x"  color="#36454F"/>
       </HStack>
     </VStack>
   );
