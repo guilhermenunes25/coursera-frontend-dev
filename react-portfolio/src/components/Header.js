@@ -58,7 +58,8 @@ const Header = () => {
     };
   }, []);
 
-  const handleClick = (anchor) => () => {
+  const handleClick = (anchor) => (event) => {
+    event.preventDefault();
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -112,9 +113,9 @@ const Header = () => {
                 
                 <div>
                 <a 
-                href="#contact-section"
+                href="#contactme-section"
                 style={{textDecoration:"none", color:"white"}}
-                onClick={handleClick("contact")}
+                onClick={handleClick("contactme")}
                 >
                   Contact me
                 </a>
