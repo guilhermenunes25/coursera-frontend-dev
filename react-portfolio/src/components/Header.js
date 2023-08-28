@@ -8,6 +8,7 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
+import "../Header.css"
 
 const socials = [
   {
@@ -41,10 +42,12 @@ const Header = () => {
 
     if (currentScrollY > prevScrollY) {
       // Scrolling down
-      boxRef.current.style.transform = "translateY(-200px)";
+      boxRef.current.classList.add("header-hidden");
+      boxRef.current.classList.remove("header-visible");
     } else {
       // Scrolling up
-      boxRef.current.style.transform = "translateY(0)";
+      boxRef.current.classList.remove("header-hidden");
+      boxRef.current.classList.add("header-visible");
     }
 
     setPrevScrollY(currentScrollY);
@@ -73,6 +76,7 @@ const Header = () => {
     return (
       <Box
       ref={boxRef}
+      className="header-visible"
       position="fixed"
       top={0}
       left={0}
