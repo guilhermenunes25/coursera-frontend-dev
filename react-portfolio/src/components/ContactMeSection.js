@@ -22,17 +22,6 @@ const ContactMeSection = () => {
   const { onOpen } = useAlertContext();
   const [submitResponse, setSubmitResponse] = useState(null);
 
-  useEffect(() => {
-    if (submitResponse && submitResponse.success !== undefined) {
-      if (submitResponse.success) {
-        onOpen("success", "Form submitted successfully!");
-        formik.resetForm();
-      } else {
-        onOpen("error", "Form submission failed!");
-      }
-    }
-  }, [submitResponse]);
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -53,6 +42,20 @@ const ContactMeSection = () => {
         .min(25, "Must be at least 25 characters"),
     }),
   });
+
+  useEffect(() => {
+    if (submitResponse) {
+      if (submitResponse.type === "success") {
+        onOpen(
+          "success",
+          `Form submitted successfully by ${formik.values.firstName}!`
+        );
+        formik.resetForm();
+      } else if (submitResponse.type === "error") {
+        onOpen("error", "Form submission failed!");
+      }
+    }
+  }, [submitResponse, formik, onOpen]);
 
     return (
         <FullScreenSection
