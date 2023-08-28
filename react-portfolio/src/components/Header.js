@@ -42,12 +42,10 @@ const Header = () => {
 
     if (currentScrollY > prevScrollY) {
       // Scrolling down
-      boxRef.current.classList.add("header-hidden");
-      boxRef.current.classList.remove("header-visible");
+      boxRef.current.style.transform = "translateY(-200px)";
     } else {
       // Scrolling up
-      boxRef.current.classList.remove("header-hidden");
-      boxRef.current.classList.add("header-visible");
+      boxRef.current.style.transform = "translateY(0)";
     }
 
     setPrevScrollY(currentScrollY);
@@ -59,8 +57,8 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
+  }, [prevScrollY]); 
+  
   const handleClick = (anchor) => (event) => {
     event.preventDefault();
     const id = `${anchor}-section`;
@@ -72,11 +70,10 @@ const Header = () => {
       });
     }
   };
-  
-    return (
-      <Box
+
+  return (
+    <Box
       ref={boxRef}
-      className="header-visible"
       position="fixed"
       top={0}
       left={0}
@@ -87,50 +84,50 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
       zIndex={1000}
-      >
-        <Box color="white" maxWidth="1280px" margin="0 auto">
-          <HStack px={16} py={4} justifyContent="space-between" alignItems="center">
-            <nav>
-              {socials.map((social, index) => (
-                <a
+    >
+      <Box color="white" maxWidth="1280px" margin="0 auto">
+        <HStack px={16} py={4} justifyContent="space-between" alignItems="center">
+          <nav>
+            {socials.map((social, index) => (
+              <a
                 key={index}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{textDecoration: "none", color: "white", margin:"0 20px"}}
-                >
-                 <FontAwesomeIcon icon={social.icon} size="2x" />
-                </a>
-              ))}
-            </nav>
-            <nav>
-              <HStack spacing={8}>
-                <div>
+                style={{ textDecoration: "none", color: "white", margin: "0 20px" }}
+              >
+                <FontAwesomeIcon icon={social.icon} size="2x" />
+              </a>
+            ))}
+          </nav>
+          <nav>
+            <HStack spacing={8}>
+              <div>
                 <a
-                href="#projects-section"
-                style={{textDecoration: "none", color:"white"}}
-                onClick={handleClick("projects")}
+                  href="#projects-section"
+                  style={{ textDecoration: "none", color: "white" }}
+                  onClick={handleClick("projects")}
                 >
                   Projects
                 </a>
-                </div>
-                
-                <div>
-                <a 
-                href="#contactme-section"
-                style={{textDecoration:"none", color:"white"}}
-                onClick={handleClick("contactme")}
+              </div>
+
+              <div>
+                <a
+                  href="#contactme-section"
+                  style={{ textDecoration: "none", color: "white" }}
+                  onClick={handleClick("contactme")}
                 >
                   Contact me
                 </a>
-                </div>
-              </HStack>
-            </nav>
-          </HStack>
-        </Box>
+              </div>
+            </HStack>
+          </nav>
+        </HStack>
       </Box>
-    );
-  };
-  
-  export default Header;
+    </Box>
+  );
+};
+
+export default Header;
   
