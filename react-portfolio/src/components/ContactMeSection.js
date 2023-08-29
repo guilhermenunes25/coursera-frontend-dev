@@ -18,9 +18,9 @@ import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
 
 const ContactMeSection = () => {
-  const { isLoading, submit } = useSubmit();
+  const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
-  const [submitResponse, setSubmitResponse] = useState(null);
+
 
   const formik = useFormik({
     initialValues: {
@@ -29,9 +29,8 @@ const ContactMeSection = () => {
       type: "hireMe",
       comment: "",
     },
-    onSubmit: async (values) => {
-      const response = await submit(values);
-      setSubmitResponse(response);
+    onSubmit: (values) => {
+      submit('https://example.com/contactme', values)
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("Required"),
@@ -44,18 +43,13 @@ const ContactMeSection = () => {
   });
 
   useEffect(() => {
-    if (submitResponse) {
-      if (submitResponse.type === "success") {
-        onOpen(
-          "success",
-          `Form submitted successfully by ${formik.values.firstName}!`
-        );
-        formik.resetForm();
-      } else if (submitResponse.type === "error") {
-        onOpen("error", "Form submission failed!");
+    if (response) {
+      onOpen (response.type, response.message);
+        if( response.type === 'success') {
+          formik.resetForm();
+        }
       }
-    }
-  }, [submitResponse, formik, onOpen]);
+    }, [response])  
 
     return (
         <FullScreenSection
@@ -71,7 +65,7 @@ const ContactMeSection = () => {
             <Box p={6} rounded="md" w="100%">
               <form onSubmit={formik.handleSubmit}>
                 <VStack spacing={4}>
-                  <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
+                  <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                     <FormLabel htmlFor="firstName">Name</FormLabel>
                     <Input
                       id="firstName"
@@ -80,7 +74,7 @@ const ContactMeSection = () => {
                     />
                     <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
                   </FormControl>
-                  <FormControl isInvalid={formik.touched.email && formik.errors.email}>
+                  <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
                     <FormLabel htmlFor="email">Email Address</FormLabel>
                     <Input
                       id="email"
