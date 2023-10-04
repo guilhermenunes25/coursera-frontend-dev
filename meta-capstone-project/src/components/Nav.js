@@ -1,9 +1,10 @@
 import React from 'react';
+import Logo from '../assets/Logo.svg';
 
 export default function Nav () {
     return (
         <>
-        <img src="../assets/Logo.svg" alt="Little Lemon Logo"/>
+        <img src={require("../assets/Logo.svg").default} alt="Little Lemon Logo"/>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -15,3 +16,4 @@ export default function Nav () {
         </>
     )
 }
+
