@@ -9,7 +9,7 @@ export default function Nav () {
     }
 
     return (
-        <nav>
+        <nav className='navbar'>
         <img src={require("../assets/Logo.svg").default} alt="Little Lemon Logo" className="logo"/>
         <ul className="nav-menu">
             <li><a href="/">Home</a></li>
