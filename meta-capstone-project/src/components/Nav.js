@@ -3,7 +3,7 @@ import React from 'react';
 export default function Nav () {
     return (
         <>
-        <img />
+        <img src="../assets/Logo.svg" alt="Little Lemon Logo"/>
         <ul>
             <li>Home</li>
             <li>About</li>
