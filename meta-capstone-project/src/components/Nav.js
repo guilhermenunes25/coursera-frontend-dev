@@ -1,13 +1,7 @@
 import React from 'react';
-import Logo from '../assets/Logo.svg';
-import './Nav.css' 
+import '../styles/Nav.css' 
 
 export default function Nav () {
-    const imageStyles = {
-        paddingTop: '20px',
-        paddingLeft: '50px',
-    }
-
     return (
         <nav className='navbar'>
         <img src={require("../assets/Logo.svg").default} alt="Little Lemon Logo" className="logo"/>
