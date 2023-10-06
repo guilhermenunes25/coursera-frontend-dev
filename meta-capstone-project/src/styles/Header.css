@@ -21,7 +21,7 @@
 }
 
 .restaurant-title {
-    color: yellow;
+    color: #F4CE14;
     font-size: 36px;
 }
 
@@ -37,7 +37,8 @@
 }
 
 .read-more-button {
-    background-color: yellow;
+    background-color: #F4CE14;
+    border-radius: 5px;
     color: black;
     border: none;
     padding: 10px 20px;
