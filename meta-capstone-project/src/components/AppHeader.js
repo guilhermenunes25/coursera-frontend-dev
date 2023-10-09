@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '../styles/Header.css'
+import HeaderStyle from '../styles/HeaderStyle.css'
+
 
 export default function AppHeader() {
 return (
@@ -14,11 +15,11 @@ return (
                    <button className="read-more-button">Read More</button>
             </div>
             <div className="header-right">
-                <img 
-                src="../assets/restaurantfood.jpg"
-                alt="Restaurant Banner"
-                className="restaurant-banner"
-                />
+            <img
+  src="/assets/images.jpeg"  // Make sure the path is correct
+  alt="Restaurant Banner"
+  className="restaurant-banner"
+/>
             </div>
         </div>
     </header>
