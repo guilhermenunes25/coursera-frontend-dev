@@ -1,0 +1,23 @@
+.footer {
+    background-color: #495E57;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*Footer columns*/
+
+.footer-column {
+    width: 25%;
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.footer-column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
