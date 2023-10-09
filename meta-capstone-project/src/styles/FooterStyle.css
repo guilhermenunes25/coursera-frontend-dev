@@ -21,3 +21,23 @@
     display: table;
     clear: both;
 }
+
+/*Media query */
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .nav-menu {
+        padding-right: 20px;
+    }
+
+    .nav-menu li {
+        margin-right: 20px;
+    }
+}
