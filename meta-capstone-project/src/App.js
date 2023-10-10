@@ -1,5 +1,5 @@
 import './App.css';
-import Nav from './components/Nav';
+import AppNav from './components/AppNav';
 import AppHeader from './components/AppHeader';
 import Main from './components/Main';
 import AppFooter from './components/AppFooter';
@@ -7,7 +7,7 @@ import AppFooter from './components/AppFooter';
 function App() {
   return (
     <>  
-    <Nav />
+    <AppNav />
     <AppHeader />
     <Main />
     <AppFooter />
