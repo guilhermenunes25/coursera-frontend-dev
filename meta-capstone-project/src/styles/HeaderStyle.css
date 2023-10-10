@@ -58,20 +58,41 @@ restaurant-banner {
 
 /*Media query */
 
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
-    .navbar{
+    .header {
         padding: 10px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .logo {
-        max-width: 200px;
+    .header-content {
+        flex-direction: column;
     }
 
-    .nav-menu {
-        padding-right: 20px;
+    .header-left,
+    .header-right {
+        width: 100%;
     }
 
-    .nav-menu li {
-        margin-right: 20px;
+    .restaurant-title {
+        font-size: 24px;
+    }
+
+    .restaurant-subtitle {
+        font-size: 18px;
+    }
+
+    .restaurant-description {
+        font-size: 14px;
+    }
+
+    .read-more-button {
+        font-size: 14px;
+    }
+
+    .restaurant-banner {
+        max-width: 100%;
+        height: auto;
     }
 }
