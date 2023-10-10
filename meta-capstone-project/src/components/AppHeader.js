@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderStyle from '../styles/HeaderStyle.css'
+import '../styles/HeaderStyle.css'
 
 
 export default function AppHeader() {
