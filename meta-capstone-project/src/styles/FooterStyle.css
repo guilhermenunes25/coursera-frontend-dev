@@ -25,19 +25,15 @@
 /*Media query */
 
 @media (max-width: 768px) {
-    .navbar{
-        padding: 10px;
+    /* Adjust footer styles for smaller screens */
+    .footer {
+        padding: 10px; /* Adjust padding */
     }
 
-    .logo {
-        max-width: 200px;
+    /* Adjust other styles within the footer */
+    .footer-column {
+        width: 50%; /* Adjust column width for smaller screens */
     }
 
-    .nav-menu {
-        padding-right: 20px;
-    }
-
-    .nav-menu li {
-        margin-right: 20px;
-    }
+    /* Any other styles specific to smaller screens */
 }
