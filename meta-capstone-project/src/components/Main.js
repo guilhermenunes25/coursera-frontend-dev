@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/MainStyle.css'
+import MainStyle from '../styles/MainStyle.css';
+
 
 export default function Main () {
     return (
