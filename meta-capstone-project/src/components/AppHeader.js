@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/HeaderStyle.css'
+import restaurantFoodImage from '../assets/restauranfood.jpg'
 
 
 export default function AppHeader() {
@@ -16,9 +17,9 @@ return (
             </div>
             <div className="header-right">
             <img
-  src="/assets/images.jpeg"  // Make sure the path is correct
-  alt="Restaurant Banner"
-  className="restaurant-banner"
+                src={restaurantFoodImage}  // Make sure the path is correct
+                alt="Restaurant Banner"
+                className="restaurant-banner"
 />
             </div>
         </div>
