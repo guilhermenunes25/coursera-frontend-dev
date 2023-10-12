@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
 }
 
 .header-content {
@@ -23,7 +22,7 @@
 .restaurant-title {
     color: #F4CE14;
     font-size: 3.6rem;
-    margin-top: -8.125rem;
+    margin-top: 0.5rem;
     margin-bottom: -2rem;
 }
 
@@ -49,6 +48,12 @@
     font-size: 1rem;
     cursor: pointer;
     margin-top: 4rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: orange;
+        color: black;
+    }
 }
 
 .header-right {
@@ -71,6 +76,7 @@
         padding: 2%;
         flex-direction: column;
         text-align: center;
+        margin-top: 1rem;
     }
 
     .header-content {
@@ -84,22 +90,35 @@
 
     .restaurant-title {
         font-size: 2.4rem;
+        margin-top: 1rem;
     }
 
     .restaurant-subtitle {
         font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
 
     .restaurant-description {
         font-size: 1.4rem;
-    }
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        }
 
     .read-more-button {
-        font-size: 1.4rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     .restaurant-banner {
         max-width: 100%;
         height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .restaurant-title {
+        margin-top: 0.5rem;
     }
 }
