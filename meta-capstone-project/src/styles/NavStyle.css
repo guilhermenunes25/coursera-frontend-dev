@@ -4,6 +4,7 @@
     align-items: center;
     padding: 0.5rem 1rem;
     background-color: white;
+    z-index: 99;
    
 }
 
@@ -45,14 +46,21 @@
     }
 
     .logo {
-        max-width: 10rem;
+        max-width: 100%;
+        padding-left: 1rem;
     }
 
     .nav-menu {
-        padding-right: 1rem;
+        padding-right: 0;
+        flex-wrap: wrap;
     }
 
     .nav-menu li {
         margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-menu li:last-child {
+        margin-right:0;
     }
 }
