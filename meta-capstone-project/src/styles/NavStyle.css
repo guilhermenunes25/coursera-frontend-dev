@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     background-color: white;
+   
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 20rem;
     height: auto;
-    padding-left: 20px;
+    padding-left: 4.5rem;
 
 }
 
@@ -17,18 +18,18 @@
     list-style-type: none;
     display: flex;
     margin: 0;
-    padding-right: 100px;
+    padding-right: 2rem;
     align-items: center;
     justify-content: center;
 
 }
 
 .nav-menu li {
-    margin-right: 20px;
+    margin-right: 1rem;
 }
 
 .nav-menu li:last-child {
-    margin-right: 0;
+    margin-right: 4rem;
 }
 
 .nav-menu a {
@@ -40,18 +41,18 @@
 
 @media (max-width: 768px) {
     .navbar{
-        padding: 10px;
+        padding: 0.5rem;
     }
 
     .logo {
-        max-width: 200px;
+        max-width: 10rem;
     }
 
     .nav-menu {
-        padding-right: 20px;
+        padding-right: 1rem;
     }
 
     .nav-menu li {
-        margin-right: 20px;
+        margin-right: 1rem;
     }
 }
