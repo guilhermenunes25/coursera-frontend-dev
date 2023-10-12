@@ -1,7 +1,7 @@
 import './App.css';
 import AppNav from './components/AppNav';
 import AppHeader from './components/AppHeader';
-import Main from './components/Main';
+import SpecialOffers from './components/SpecialOffers';
 import AppFooter from './components/AppFooter';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>  
     <AppNav />
     <AppHeader />
-    <Main />
+    <SpecialOffers />
     <AppFooter />
     </>
   );
