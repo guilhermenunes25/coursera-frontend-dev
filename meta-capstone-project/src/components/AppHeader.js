@@ -13,7 +13,7 @@ return (
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                   <button className="read-more-button">Reserve a Table</button>
+                   <button className="reserve-a-table-button">Reserve a Table</button>
             </div>
             <div className="header-right">
             <img
