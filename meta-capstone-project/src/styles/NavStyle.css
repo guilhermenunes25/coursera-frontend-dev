@@ -34,6 +34,8 @@
 }
 
 .nav-menu a {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.125rem;
     text-decoration: none;
     color: black;
 }
