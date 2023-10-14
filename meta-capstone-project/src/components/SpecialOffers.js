@@ -6,8 +6,10 @@ export default function EspecialOffers () {
     return (
         <>
             <div div className="container">
+                <div className="header-content">
                 <h2 className="main-header">This Weeks Specials!</h2>
                 <button className="online-menu-button">Online Menu</button>
+                </div>
                 <div className="cards-container">
                 <div className="card" id="card1">
                     <img src="assets/menu.jpg" alt="menu-card" />
