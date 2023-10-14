@@ -9,11 +9,13 @@
 
 }
 
+
 .main-header {
+    font-family: 'Markazi Text', sans-serif;
     color: black;
     text-align: left;
-    font-size: 2.5rem;
-    margin: 10rem 0rem 5rem 5rem;
+    font-size: 4.5rem;
+    margin: 10rem 0rem 5rem -1rem;
    
 }
 
@@ -25,7 +27,7 @@
     padding: 1% 2%;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 4rem;
+    margin-top: 0;
     transition: background-color 0.3s;
 
     &:hover {
