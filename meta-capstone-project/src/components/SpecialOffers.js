@@ -15,7 +15,7 @@ export default function EspecialOffers () {
                     <img src="assets/menu.jpg" alt="menu-card" />
                     <h2 className="card-title">Greek Salad</h2>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, eos fugiat nisi sequi sit quaerat! Ipsa rem commodi illo adipisci nisi. Reiciendis nihil magnam reprehenderit similique esse fugiat, accusamus autem hic quod ab et adipisci numquam ex doloribus cumque inventore quibusdam ipsum, commodi saepe. Harum.
+                        The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                     </p>
                     <a href="#" className="card-button">Order a delivery</a>
                 </div>
