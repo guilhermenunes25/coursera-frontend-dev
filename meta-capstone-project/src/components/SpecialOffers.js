@@ -5,7 +5,7 @@ import '../styles/SpecialOffersStyle.css';
 export default function EspecialOffers () {
     return (
         <>
-            <div div className="container">
+            <div className="container">
                 <div className="header-content">
                 <h2 className="main-header">This Weeks Specials!</h2>
                 <button className="online-menu-button">Online Menu</button>
