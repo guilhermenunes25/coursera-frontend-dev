@@ -31,7 +31,7 @@ export default function EspecialOffers () {
                     <img src="assets/about.jpg" alt="about-info"/>
                     <h2 className="card-title">Lemon Dessert</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptatibus consequatur non unde commodi officia a! Eligendi rem, consequatur nam, esse ipsam quasi facilis suscipit illum quae id odio dolorem itaque nemo? Blanditiis, voluptatum? Iure, blanditiis quo. Perferendis maiores soluta illum molestias ut rerum quae?
+                        This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined. 
                     </p>
                     <a href="#" className="card-button">Order a delivery</a>
                 </div>
