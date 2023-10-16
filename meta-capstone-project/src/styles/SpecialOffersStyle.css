@@ -65,7 +65,8 @@
 .card p {
     color:black;
     font-family: 'Karla', sans-serif;
-    text-align: center;
+    text-align: justify;
+    margin-left: 1rem;
     
 }
 
@@ -85,7 +86,8 @@ h2 {
     color: black;
     font-family: 'Karla', sans-serif;
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
+    margin-left: 1rem;
 }
 
 .card-button {
@@ -93,6 +95,7 @@ h2 {
     font-weight: bold;
     color: black;
     cursor: pointer;
+    margin: 3rem 0 1rem 1rem;
 }
 
 .card-button:hover {
