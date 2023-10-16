@@ -23,7 +23,7 @@ export default function EspecialOffers () {
                     <img src="assets/book.jpg" alt="book-table"/>
                     <h2 className="card-title">Bruschetta</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ex pariatur repellendus hic accusamus! Esse deserunt maxime facere sapiente minus officia ullam, vitae iure dignissimos fugit est quisquam laudantium voluptatibus neque aliquid, laboriosam voluptatem ipsa. Ab a explicabo quaerat reiciendis totam ut iure officiis nisi?
+                        Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
                     </p>
                     <a href="#" className="card-button">Order a delivery</a>
                 </div>
