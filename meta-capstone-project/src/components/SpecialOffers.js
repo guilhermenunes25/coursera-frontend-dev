@@ -26,8 +26,10 @@ export default function EspecialOffers () {
                          <p className="card-description">
                         The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
                          </p>
-                         <FontAwesomeIcon icon={faBasketShopping} style={{ color: '#333333' }} />
-                                <a href="#" className="card-button">Order a delivery</a>
+                            <div className="order-button-container">
+                                <a href="#" className="order-delivery-button"> Order a delivery</a>
+                                <FontAwesomeIcon icon={faBasketShopping} className="my-custom-icon" />
+                            </div>
                 </div>
                 <div className="card" id="card2">
                     <img src={bruschettaImg} alt="bruschetta"/>
@@ -36,10 +38,12 @@ export default function EspecialOffers () {
                                 <p className="card-price">$5.99</p>
                     </div>
                          <p className="card-description">
-                        Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
+                        Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Fresh and delicious. 
                          </p>
-                         <FontAwesomeIcon icon={faBasketShopping} style={{ color: '#333333' }} />
-                                <a href="#" className="card-button">Order a delivery</a>
+                         <div className="order-button-container">
+                                <a href="#" className="order-delivery-button">Order a delivery</a>
+                                <FontAwesomeIcon icon={faBasketShopping} className="my-custom-icon" />
+                            </div>
                 </div>
                 <div className="card" id="card3">
                     <img src={lemonDessert} alt="lemon-dessert"/>
@@ -50,8 +54,10 @@ export default function EspecialOffers () {
                         <p className="card-description">
                         This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined. 
                         </p>
-                        <FontAwesomeIcon icon={faBasketShopping} style={{ color: '#333333' }} />
-                                <a href="#" className="card-button">Order a delivery</a>
+                        <div className="order-button-container">
+                                <a href="#" className="order-delivery-button"> Order a delivery</a>
+                                <FontAwesomeIcon icon={faBasketShopping} className="my-custom-icon" />
+                            </div>
                         </div>
                     </div>
                 </div>
