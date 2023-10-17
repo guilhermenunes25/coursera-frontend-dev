@@ -12,7 +12,7 @@
 
 .main-header {
     font-family: 'Markazi Text', sans-serif;
-    color: black;
+    color: #333333;
     text-align: left;
     font-size: 4.5rem;
     margin: 3rem 0rem 5rem -1rem;
@@ -23,7 +23,7 @@
     font-family: 'Karla', sans-serif;
     background-color: #F4CE14;
     border-radius: 5px;
-    color: black;
+    color:  #333333;
     border: none;
     padding: 1% 2%;
     font-size: 1.125rem;
@@ -62,8 +62,8 @@
     transition: transform 0.2s;
 }
 
-.card p {
-    color:black;
+.card-description {
+    color: #333333;
     font-family: 'Karla', sans-serif;
     text-align: justify;
     margin-left: 1rem;
@@ -82,18 +82,29 @@ transform: scale(1.1);
     width: 100%;
 }
 
-h2 {
-    color: black;
+.card-title {
+    color:  #333333;
     font-family: 'Karla', sans-serif;
     font-size: 2rem;
     text-align: left;
-    margin-left: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-price {
+    color: #EE9972;
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    margin: -3rem 1rem 3rem ;
+    text-align: right;
 }
 
 .card-button {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: #333333;
     cursor: pointer;
     margin: 3rem 0 1rem 1rem;
 }
