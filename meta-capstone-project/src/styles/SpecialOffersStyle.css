@@ -121,3 +121,61 @@ transform: scale(1.1);
     font-weight: bold;
     font-size: 1.25rem;
 }
+
+
+@media (max-width: 768px) {
+
+    .main-header {
+        text-align: center;
+        font-size: 4.5rem;
+        margin: 2rem 0 0 1rem;
+       
+    }
+
+    .online-menu-button {
+        align-items: 'center';
+        border-radius: 5px;
+        border: none;
+        padding: 1% 2%;
+        font-size: 1.125rem;
+        cursor: pointer;
+        margin-top: 2.5rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    
+    /*cards*/
+
+    .cards-container {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;
+      margin-left: 1.5rem;
+    }
+  
+    .card {
+      flex: 0 0 calc(100% - 1.25rem);
+      margin: 1rem 0; 
+      text-align: center;
+    }
+
+    .card-title {
+        color:  #333333;
+        font-family: 'Karla', sans-serif;
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-price {
+        color: #EE9972;
+        font-weight: bold;
+        font-family: 'Karla', sans-serif;
+        font-size: 1.25rem;
+        margin: -2.725rem 1rem 3rem ;
+        text-align: right;
+    }
+
+
+}
