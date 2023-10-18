@@ -81,7 +81,7 @@
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
     .header {
-        padding: 2%;
+        padding: 0%;
         flex-direction: column;
         text-align: center;
         margin-top: 1rem;
@@ -97,36 +97,37 @@
     }
 
     .restaurant-title {
-        font-size: 2.4rem;
+        font-size: 3rem;
         margin-top: 1rem;
+        margin-bottom: -2rem;
     }
-
+    
     .restaurant-subtitle {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin: 1rem 0 2rem 0;
     }
 
     .restaurant-description {
-        font-size: 1.4rem;
+        font-size: 1rem;
         line-height: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        text-align: justify;
         }
 
-    .read-more-button {
-        font-size: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+    .reserve-a-table-button {
+        align-items: 'center';
+        border-radius: 5px;
+        border: none;
+        padding: 1% 2%;
+        font-size: 1.125rem;
+        cursor: pointer;
+        margin: 1rem 0 1rem 0;
+        height: 3rem;
+        width: 12rem;
     }
 
     .restaurant-banner {
         max-width: 100%;
         height: auto;
-    }
-}
-
-@media (min-width: 769px) {
-    
-    .restaurant-title {
-        margin-top: 0.5rem;
     }
 }
