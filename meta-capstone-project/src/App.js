@@ -3,6 +3,7 @@ import AppNav from './components/AppNav';
 import AppHeader from './components/AppHeader';
 import SpecialOffers from './components/SpecialOffers';
 import AppFooter from './components/AppFooter';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <AppNav />
     <AppHeader />
     <SpecialOffers />
+    <Testimonials />
     <AppFooter />
     </>
   );
