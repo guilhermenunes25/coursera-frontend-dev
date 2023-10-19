@@ -1,0 +1,64 @@
+.testimonials-container {
+    background-color: #495E57;
+    color: #EDEFEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-header {
+    font-family: 'Markazi Text', sans-serif;
+    color: #EDEFEE; /* Set header color to white */
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem; /* Add spacing below the header */
+  }
+
+
+.testimonials-card {
+    background-color: #EDEFEE;
+    border-radius: 1rem;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    width: 25%;
+    margin: 2rem -2rem 3rem -2rem; 
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+    &:hover {
+        background-color: lightgoldenrodyellow
+    }
+}
+
+.testimonials-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.rating {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 2rem 0 1rem 1rem;
+}
+
+.reviewer-photo {
+    width: 9.5rem;
+    height: 8.75rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
