@@ -1,30 +1,34 @@
 import React from 'react';
+import user1 from '../assets/user1.jpg';
+import user2 from '../assets/user2.jpg';
+import user3 from '../assets/user3.jpg';
+import user4 from '../assets/user4.jpg';
 
 export default function Testimonials () {
 
   const testimonials = [
     {
-      rating: '⭐️⭐️⭐️⭐️⭐️'
-      photo: 'https://unsplash.com/photos/f5xiGmFwXIU?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash',
+      rating: '⭐️⭐️⭐️⭐️⭐️',
+      photo: user1,
       name: 'John Doe',
       review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     {
-      rating:'⭐️⭐️⭐️⭐️⭐️'
-      photo: 'https://unsplash.com/photos/TYDLLLE7vWQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash',
+      rating:'⭐️⭐️⭐️⭐️⭐️',
+      photo: user2,
       name: 'Jane Smith',
       review: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      rating:'⭐️⭐️⭐️⭐️⭐️'
-      photo: 'https://unsplash.com/photos/4H2fivgnwRg?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash',
+      rating:'⭐️⭐️⭐️⭐️⭐️',
+      photo: user3,
       name: 'Aaron Durant',
       review: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      rating:'⭐️⭐️⭐️⭐️⭐️'
-      photo: 'https://unsplash.com/photos/4H2fivgnwRg?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash',
-      name: 'Lea Wright',
+      rating:'⭐️⭐️⭐️⭐️⭐️',
+      photo: user4,
+      name: 'Rebecca Maya',
       review: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
 
@@ -43,8 +47,6 @@ export default function Testimonials () {
             </div>
           ))}
         </div>
-      </div>
-            
-        
+      </div>  
     )
 }
