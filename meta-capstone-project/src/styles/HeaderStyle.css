@@ -97,20 +97,19 @@
     }
 
     .restaurant-title {
-        font-size: 3rem;
-        margin-top: 1rem;
-        margin-bottom: -2rem;
+        font-size: 4rem;
+        margin: 2.5rem 0 -2rem 0;
     }
     
     .restaurant-subtitle {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin: 1rem 0 2rem 0;
     }
 
     .restaurant-description {
-        font-size: 1rem;
-        line-height: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin: 2.5rem 0 2.5rem 0;
         text-align: justify;
         }
 
@@ -121,7 +120,7 @@
         padding: 1% 2%;
         font-size: 1.125rem;
         cursor: pointer;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 2.5rem 0;
         height: 3rem;
         width: 12rem;
     }
