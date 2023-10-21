@@ -1,0 +1,39 @@
+.about-content {
+    background-color: #EDEFEE;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+.header-left {
+    flex: 1;
+}
+
+.restaurant-title {
+    font-family: 'Markazi Text', sans-serif;
+    color: #F4CE14;
+    font-size: 5rem;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+}
+
+.restaurant-subtitle {
+    font-family: 'Markazi Text', sans-serif;
+    color: #EDEFEE;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.restaurant-description {
+    font-family: 'Karla', sans-serif;
+    color: #EDEFEE;
+    font-size: 1.1125rem;
+    line-height: 1.5em;
+    margin-bottom: 2%;
+}
