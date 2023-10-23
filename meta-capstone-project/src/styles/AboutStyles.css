@@ -1,6 +1,12 @@
-.about-content {
-    background-color: #EDEFEE;
+.about-main {
     color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,30 +16,65 @@
 }
 
 
-.header-left {
+.about-left {
     flex: 1;
+    position: relative;
 }
 
-.restaurant-title {
+.about-title {
     font-family: 'Markazi Text', sans-serif;
-    color: #F4CE14;
+    color: #333333;
     font-size: 5rem;
     margin-top: 1rem;
     margin-bottom: -2rem;
 }
 
-.restaurant-subtitle {
+.about-subtitle {
     font-family: 'Markazi Text', sans-serif;
-    color: #EDEFEE;
+    color: #333333;
     font-size: 3rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
-.restaurant-description {
+.about-description {
     font-family: 'Karla', sans-serif;
-    color: #EDEFEE;
+    color: #333333;
     font-size: 1.1125rem;
     line-height: 1.5em;
     margin-bottom: 2%;
+}
+
+.about-right {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image-container {
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 100%;
+    height: auto; /* Set the height to auto */
+    box-sizing: border-box;
+}
+
+.about-image-a, .about-image-b {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -15rem;
+}
+
+.about-image-a {
+    left: 0;
+    z-index: 1;
+}
+
+.about-image-b {
+    right: 0;
+    z-index: 2;
+    width: 50%;
 }
