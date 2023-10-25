@@ -1,3 +1,4 @@
+/* Styles for the main about section */
 .about-main {
     color: #333333;
     display: flex;
@@ -6,21 +7,22 @@
     height: auto;
 }
 
+/* Styles for the about content section */
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
+    margin: 10rem 1rem 20rem 6rem;
 }
 
-
+/* Styles for the left part of the about section */
 .about-left {
     flex: 1;
     position: relative;
 }
 
+/* Styles for the title in the about section */
 .about-title {
     font-family: 'Markazi Text', sans-serif;
     color: #333333;
@@ -29,6 +31,7 @@
     margin-bottom: -2rem;
 }
 
+/* Styles for the subtitle in the about section */
 .about-subtitle {
     font-family: 'Markazi Text', sans-serif;
     color: #333333;
@@ -37,6 +40,7 @@
     margin-top: 1rem;
 }
 
+/* Styles for the description in the about section */
 .about-description {
     font-family: 'Karla', sans-serif;
     color: #333333;
@@ -45,23 +49,37 @@
     margin-bottom: 2%;
 }
 
+/* Styles for the right part of the about section */
 .about-right {
     flex: 1;
     text-align: right;
+    position: relative;
 }
 
-.about-image-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Styles for image containers */
+.mario-adrian-a-container {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -8rem;
+    z-index: 1;
 }
 
-.about-image-a-container {
-    max-width: 40%;
-    height: auto;
+.mario-adrian-b-container {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 30%;
+    z-index: 2;
+    margin-left: -8rem;
 }
 
-.about-image-b-container {
-    max-width: 40%;
-    height: auto;
+.mario-adrian-a {
+    max-width: 100%;
+}
+
+.mario-adrian-b {
+    max-width: 100%;
 }
