@@ -15,24 +15,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     </p>
         </div>
         <div className="about-right">
-          <div className="about-image-container">
-            <div className="about-image-a-container">
+            <div className="mario-adrian-a-container">
               <img
                 src={MarioAdrianA}
-                alt="Image A"
-                className="about-image-a"
+                alt="Mario Adrian A"
+                className="mario-adrian-a"
               />
             </div>
-            <div className="about-image-b-container">
+            <div className="mario-adrian-b-container">
               <img
                 src={MarioAdrianB}
-                alt="Image B"
-                className="about-image-b"
+                alt="Mario Adrian B"
+                className="mario-adrian-b"
               />
             </div>
           </div>
         </div>
       </div>
-    </div>
     )
 }
