@@ -13,7 +13,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 10rem 1rem 20rem 6rem;
+    margin: 10rem 10rem 25rem 6rem;
+
 }
 
 /* Styles for the left part of the about section */
@@ -45,8 +46,10 @@
     font-family: 'Karla', sans-serif;
     color: #333333;
     font-size: 1.1125rem;
+    text-align: justify;
     line-height: 1.5em;
     margin-bottom: 2%;
+    margin-right: 5rem;
 }
 
 /* Styles for the right part of the about section */
@@ -54,26 +57,25 @@
     flex: 1;
     text-align: right;
     position: relative;
+    margin-right: 1rem;
 }
 
 /* Styles for image containers */
 .mario-adrian-a-container {
     position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 50%;
+    width: 85%;
+    left: 70%;
     transform: translate(-50%, -50%);
-    margin-left: -8rem;
     z-index: 1;
 }
 
 .mario-adrian-b-container {
     position: absolute;
-    width: 80%;
+    width: 85%;
     top: 10%;
-    left: 30%;
+    left: 10%;
+    margin-left: -5rem;
     z-index: 2;
-    margin-left: -8rem;
 }
 
 .mario-adrian-a {
