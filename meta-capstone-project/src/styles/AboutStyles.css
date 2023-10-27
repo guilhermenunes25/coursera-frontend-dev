@@ -85,3 +85,47 @@
 .mario-adrian-b {
     max-width: 100%;
 }
+
+@media (max-width: 768px) {
+   .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 3rem 6rem;
+   }
+   
+    .about-title {
+        font-size: 4rem;
+        margin: 1rem 1rem 0 -2.15rem;
+        line-height: 1;
+    }
+
+    .about-subtitle {
+        font-size: 2.5rem;
+        margin: -0.5rem 0 2rem 3rem;
+    }
+
+    .about-description {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin: 1.5rem 0 2.5rem -2rem;
+        text-align: justify;
+        max-width: 90%;
+    }
+
+    .mario-adrian-a-container,
+    .mario-adrian-b-container {
+        position: static;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .mario-adrian-a-container {
+        margin: 6rem 5rem 0 6.5rem; /* Adjust this as needed */
+    }
+    
+    .mario-adrian-b-container {
+        margin: -9rem 0 0 -2.15rem; /* Adjust this as needed */
+    }
+}
+
