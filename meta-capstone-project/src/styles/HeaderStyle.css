@@ -79,7 +79,7 @@
 /*Media query */
 
 /* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1024px) {
     .header {
         padding: 0%;
         flex-direction: column;
