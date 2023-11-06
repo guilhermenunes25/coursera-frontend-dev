@@ -1,7 +1,7 @@
 import React from 'react';
-import React, { useState } from 'react';
 
-export default function BookingForm() {
+
+export default function BookingForm( {formData, availableTimes, onInputChange}) {
 
     return (
        <form style={{ display: 'grid', maxWidth: '200px', gap: '20px'}}>
