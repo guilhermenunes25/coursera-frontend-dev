@@ -7,20 +7,22 @@ import Testimonials from './components/Testimonials';
 import AppAbout from './components/AppAbout';
 import BookingPage from './components/BookingPage'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>  
+    <Router>
     <AppNav />
-    <Switch>
-      <Route path="/reservations" component={BookingPage} />
-    </Switch>
+      <Routes>
+        <Route path="/reservations" component={BookingPage} />
+      </Routes>
     <AppHeader />
     <SpecialOffers />
     <Testimonials />
     <AppAbout />
     <AppFooter />
+    </Router>
     </>
   );
 }
