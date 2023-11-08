@@ -1,54 +1,43 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState, useReducer} from 'react';
 import BookingForm from './BookingForm';
 
-// Define a reducer function
-function availableTimesReducer(state, action) {
-  if (action.type === 'UPDATE_TIMES') {
-    if (action.date === '2023-11-01') {
-      return ['17:00', '18:00', '19:00'];
-    } else if (action.date === '2023-11-02') {
-      return ['19:00', '20:00', '21:00'];
-    } else if (action.date === '2023-11-03') {
-      return ['18:00', '20:00', '22:00'];
-    } else {
-      return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+function reducer(state, action) {
+  switch (action.type) {
+    case 'UPDATE_TIMES':
+      return {...state, availableTimes: updateTimes(action.selectedDate)};
+    default:
+      return state;
     }
-  } else {
-    return state;
-  }
+}
+
+function updateTimes(selectedDate) {
+  return [
+    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
+  ];
+}
+
+function initializeTimes() {
+  return updateTimes(null);
+}
+
+const initialState = {
+  availableTimes: initializeTimes(), 
 }
 
 export default function BookingPage() {
-  const [formData, setFormData] = useState({
-    date: '',
-    time: '17:00',
-    guests: 1,
-    occasion: 'Birthday',
-  });
-
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, []);
-
-  const handleInputChange = (name, value) => {
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-
-    if (name === 'date') {
-      // Dispatch an action to update available times based on the selected date
-      dispatch({ type: 'UPDATE_TIMES', date: value });
-    }
-  };
+  
+  const [state, dispatch] = useReducer(reducer, { availableTimes: initializeTimes() });
 
   return (
     <div>
       <h1>Booking Page</h1>
       <BookingForm
-        formData={formData}
-        availableTimes={availableTimes}
-        onInputChange={handleInputChange}
-        dispatch={dispatch}
+        availableTimes={state.availableTimes}
+        setAvailableTimes={(selectedDate) =>
+          dispatch({ type: 'UPDATE_TIMES', selectedDate })
+        }
       />
     </div>
   );
 }
+
