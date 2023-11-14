@@ -1,16 +1,17 @@
-import { initializeTimes } from './BookingForm';
+import { updateTimes, initializeTimes } from './components/BookingPage';
 
-test('initializeTimes function returns the expected value', () => {
+test('updateTimes returns the same value provided in the state', () => {
+  const currentState = { availableTimes: ['09:00', '10:00', '11:00'] };
+
+  const result = updateTimes(currentState);
+  expect(result).toEqual(currentState.availableTimes);
+});
+
+test('initializeTimes returns the expected array of times', () => {
   const expectedTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
+    '09:00', '10:00', '11:00'
   ];
 
-  const result = initializeTimes(); // Call the function directly
-
+  const result = initializeTimes();
   expect(result).toEqual(expectedTimes);
 });
