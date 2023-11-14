@@ -11,19 +11,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>  
     <Router>
-    <AppNav />
+      <div>
+      <AppNav />
       <Routes>
-        <Route path="/reservations" component={BookingPage} />
+        <Route path="/reservations" element={<BookingPage />} />
       </Routes>
-    <AppHeader />
-    <SpecialOffers />
-    <Testimonials />
-    <AppAbout />
-    <AppFooter />
+      </div>
+      <AppHeader />
+      <SpecialOffers />
+      <Testimonials />
+      <AppAbout />
+      <AppFooter />
     </Router>
-    </>
   );
 }
 
