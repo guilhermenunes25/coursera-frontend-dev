@@ -1,7 +1,7 @@
-import React, { useState, useReducer} from 'react';
+import React, { useReducer} from 'react';
 import BookingForm from './BookingForm';
 
-function reducer(state, action) {
+export function reducer(state, action) {
   switch (action.type) {
     case 'UPDATE_TIMES':
       return {...state, availableTimes: updateTimes(action.selectedDate)};
@@ -10,17 +10,24 @@ function reducer(state, action) {
     }
 }
 
-function updateTimes(selectedDate) {
-  return [
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-  ];
+export function updateTimes(selectedDate) {
+  const baseTimes = [ '09:00', '10:00', '11:00'];
+
+  if(selectedDate) {
+
+    return baseTimes.concat ([
+      '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
+    ]);
+  } else {
+    return baseTimes;
+  }
 }
 
-function initializeTimes() {
+export function initializeTimes() {
   return updateTimes(null);
 }
 
-const initialState = {
+export const initialState = {
   availableTimes: initializeTimes(), 
 }
 
