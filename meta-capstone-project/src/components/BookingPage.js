@@ -1,5 +1,6 @@
 import React, { useReducer} from 'react';
 import BookingForm from './BookingForm';
+import {Link} from 'react-router-dom'
 
 export function reducer(state, action) {
   switch (action.type) {
@@ -38,6 +39,7 @@ export default function BookingPage() {
   return (
     <div>
       <h1>Booking Page</h1>
+      <Link to="/">Return</Link>
       <BookingForm
         availableTimes={state.availableTimes}
         setAvailableTimes={(selectedDate) =>
