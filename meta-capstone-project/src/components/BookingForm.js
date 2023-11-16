@@ -1,19 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-export default function BookingForm({availableTimes, setAvailableTimes}) {
-//variables for the form fields;
-const [date, setDate] = useState('');
-const [time, setTime] = useState('');
-const [guests, setGuests] = useState('');
-const [occasion, setOccasion] = useState('');
+export default function BookingForm({ availableTimes, setAvailableTimes }) {
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [guests, setGuests] = useState('');
+  const [occasion, setOccasion] = useState('');
 
-const handleDateChange = (e) => {
-  const selectedDate = e.target.value;
-  setAvailableTimes(selectedDate);
-  setDate(selectedDate);
-}
+  const handleDateChange = async (e) => {
+    const selectedDate = e.target.value;
+    setDate(selectedDate);
+    await setAvailableTimes(selectedDate);
+  };
 
-return (
+  return (
     <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
       <label htmlFor="res-date">Choose a date</label>
       <input
@@ -26,10 +25,10 @@ return (
       <label htmlFor="res-time">Choose a time</label>
       <select
         id="res-time"
-        value={time} 
+        value={time}
         onChange={(e) => setTime(e.target.value)}
       >
-        <option value="">Select a time</option> 
+        <option value="">Select a time</option>
         {availableTimes.map((option, index) => (
           <option key={index} value={option}>
             {option}
