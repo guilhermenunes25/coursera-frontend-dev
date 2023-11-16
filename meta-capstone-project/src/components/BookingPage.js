@@ -12,15 +12,10 @@ export function reducer(state, action) {
 }
 
 export function updateTimes(selectedDate) {
-  const baseTimes = [ '09:00', '10:00', '11:00'];
-
-  if(selectedDate) {
-
-    return baseTimes.concat ([
-      '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-    ]);
+  if(selectedDate) { 
+    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   } else {
-    return baseTimes;
+    return [];
   }
 }
 
@@ -34,7 +29,7 @@ export const initialState = {
 
 export default function BookingPage() {
   
-  const [state, dispatch] = useReducer(reducer, { availableTimes: initializeTimes() });
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
