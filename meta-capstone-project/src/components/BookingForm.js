@@ -10,11 +10,12 @@ const [occasion, setOccasion] = useState('');
 const handleDateChange = (e) => {
   const selectedDate = e.target.value;
   setAvailableTimes(selectedDate);
+  setDate(selectedDate);
 }
 
 return (
     <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
-      <label htmlFor="res-date">Choose date</label>
+      <label htmlFor="res-date">Choose a date</label>
       <input
         type="date"
         id="res-date"
@@ -22,7 +23,7 @@ return (
         onChange={handleDateChange}
       />
 
-      <label htmlFor="res-time">Choose time</label>
+      <label htmlFor="res-time">Choose a time</label>
       <select
         id="res-time"
         value={time} 
