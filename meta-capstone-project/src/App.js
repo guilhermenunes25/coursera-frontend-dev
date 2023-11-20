@@ -7,6 +7,7 @@ import AppFooter from './components/AppFooter';
 import Testimonials from './components/Testimonials';
 import AppAbout from './components/AppAbout';
 import BookingLayout from './components/BookingLayout';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/reservations" element={<BookingLayout />} />
+          <Route path="/reservations/confirmed" element={<ConfirmedBooking />} />
         </Routes>
       </div>
     </Router>
