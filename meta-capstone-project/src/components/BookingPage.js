@@ -1,6 +1,11 @@
 import React, { useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
+
+const submitAPI = async (formData) => {
+  console.log('Form submitted successfully:', formData);
+  return true;
+}
 
 const fetchData = async (date) => {
   // Replace this with your actual API call
@@ -41,10 +46,25 @@ export const initialState = {
 
 export default function BookingPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const navigate = useNavigate();
 
   useEffect(() => {
     initializeTimes(dispatch);
   }, []);
+
+  const submitForm = async (formData) => {
+    try {
+      const apiResponse = await submitAPI(formData);
+      if (apiResponse) {
+        alert('Booking submitted successfully!');
+        navigate('/reservations/confirmed')
+      } else {
+        console.error('Booking submission failed.');
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
+  };
 
   return (
     <div>
@@ -55,6 +75,7 @@ export default function BookingPage() {
         setAvailableTimes={(selectedDate) =>
           updateTimes(selectedDate, dispatch)
         }
+        onSubmit={submitForm}
       />
     </div>
   );
