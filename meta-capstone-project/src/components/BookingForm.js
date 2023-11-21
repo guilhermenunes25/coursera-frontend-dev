@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function BookingForm({ availableTimes, setAvailableTimes }) {
+export default function BookingForm({ availableTimes, setAvailableTimes, onSubmit }) {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
@@ -12,8 +12,23 @@ export default function BookingForm({ availableTimes, setAvailableTimes }) {
     await setAvailableTimes(selectedDate);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Collect form data
+    const formData = {
+      date,
+      time,
+      guests,
+      occasion,
+    };
+
+    // Call the onSubmit function passed from BookingPage
+    onSubmit(formData);
+  };
+
   return (
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
+    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose a date</label>
       <input
         type="date"
