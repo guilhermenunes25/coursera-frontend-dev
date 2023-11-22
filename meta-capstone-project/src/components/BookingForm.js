@@ -5,27 +5,35 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
   const [occasion, setOccasion] = useState('');
+  const [isFormValid, setFormValid] = useState(false);
 
   const handleDateChange = async (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
     await setAvailableTimes(selectedDate);
+    validateForm();
   };
+
+  const validateForm = () => {
+    const isValid = date !== '' && time !== '' && guests !== '' && occasion !== '';
+    setFormValid(isValid);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Collect form data
-    const formData = {
-      date,
-      time,
-      guests,
-      occasion,
+    if (isFormValid) {
+      const formData = {
+        date,
+        time,
+        guests,
+        occasion,
+      };
+      onSubmit(formData);
+    } else {
+      console.error('Invalid form submission. Please check your inputs');
+      }
     };
-
-    // Call the onSubmit function passed from BookingPage
-    onSubmit(formData);
-  };
 
   return (
     <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
@@ -35,6 +43,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         id="res-date"
         value={date}
         onChange={handleDateChange}
+        required
       />
 
       <label htmlFor="res-time">Choose a time</label>
@@ -42,6 +51,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         id="res-time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
+        required
       >
         <option value="">Select a time</option>
         {availableTimes.map((option, index) => (
@@ -60,6 +70,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         id="guests"
         value={guests}
         onChange={(e) => setGuests(e.target.value)}
+        required
       />
 
       <label htmlFor="occasion">Occasion</label>
@@ -67,6 +78,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         id="occasion"
         value={occasion}
         onChange={(e) => setOccasion(e.target.value)}
+        required
       >
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
