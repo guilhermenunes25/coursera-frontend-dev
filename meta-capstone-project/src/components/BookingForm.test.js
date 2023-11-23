@@ -1,33 +1,84 @@
-import { initializeTimes, updateTimes } from './BookingPage';
+import React from "react";
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import BookingForm from "./BookingForm";
 
-jest.mock('./BookingPage', () => ({
-  fetchData: jest.fn(() => Promise.resolve(['09:00', '10:00', '11:00'])),
-}));
 
-test('initializeTimes updates the state with expected array of times', async () => {
-  const dispatch = jest.fn();
-
-  await initializeTimes(dispatch);
-
-  expect(dispatch).toHaveBeenCalledWith({
-    type: 'UPDATE_TIMES',
-    availableTimes: ['09:00', '10:00', '11:00'],
-
+describe('BookingForm component', () => {
+  test('HTML5 validation for date input', () => {
+    render(<BookingForm />);
+    const dateInput = screen.getByLabelText('Choose a date');
+    fireEvent.change(dateInput, { target: {value: ''} });
+    expect(dateInput).toHaveAttribute('required');
   });
-})
 
-jest.mock('./BookingPage', () => ({
-  fetchData: jest.fn((date) => Promise.resolve(['12:00', '13:00', '14:00'])),
-}));
+  test('HTML5 validation for time select', () => {
+    render(<BookingForm availableTimes={['10:00', '12:00']}/>);
+    const timeSelect = screen.getByLabelText('Choose a time');
+    fireEvent.change(timeSelect, { target: {value: ''} });
+    expect(timeSelect).toHaveAttribute('required');
+  });
 
-test('updateTimes updates the state with the fetched array of times for a specific date', async () => {
-  const dispatch = jest.fn();
-  const selectedDate = '2023-12-01';
+  test('HTML5 validation for guests input', () => {
+    render(<BookingForm />);
+    const guestsInput = screen.getByLabelText('Number of guests');
+    fireEvent.change(guestsInput, { target: { value: '' } });
+    expect(guestsInput).toHaveAttribute('required');
+    fireEvent.change(guestsInput, { target: { value: '0' } });
+    expect(guestsInput).toHaveAttribute('required');
 
-  await updateTimes(selectedDate, dispatch);
+    test('HTML5 validation for occasion select', () => {
+      render(<BookingForm />);
+      const occasionSelect = screen.getByLabelText('Occasion');
+      fireEvent.change(occasionSelect, { target: { value: '' } });
+      expect(occasionSelect).toHaveAttribute('required');
+    });
+  });
 
-  expect(dispatch).toHaveBeenCalledWith({
-    type: 'UPDATE_TIMES',
-    availableTimes:['12:00', '13:00', '14:00'],
-  })
+  test('Valid form submission', () => {
+    render(<BookingForm />);
+    const dateInput = screen.getByLabelText('Choose a date');
+    const timeSelect = screen.getByLabelText('Choose a time');
+    const guestsInput = screen.getByLabelText('Number of guests');
+    const occasionSelect = screen.getByLabelText('Occasion');
+    const submitButton = screen.getByText('Make Your reservation');
+
+    fireEvent.change(dateInput, { target: { value: '2023-12-01' } });
+    fireEvent.change(timeSelect, { target: { value: '12:00' } });
+    fireEvent.change(guestsInput, { target: { value: '2' } });
+    fireEvent.change(occasionSelect, { target: { value: 'Birthday' } });
+
+    expect(submitButton).not.toBeDisabled();
+  });
+
+  test('Invalid form submission', () => {
+    render(<BookingForm />);
+    const submitButton = screen.getByText('Make Your reservation');
+
+    // Submit without filling in any fields
+    fireEvent.click(submitButton);
+    expect(submitButton).toBeDisabled();
+
+    // Submit with incomplete fields
+    const dateInput = screen.getByLabelText('Choose a date');
+    const timeSelect = screen.getByLabelText('Choose a time');
+    const guestsInput = screen.getByLabelText('Number of guests');
+    const occasionSelect = screen.getByLabelText('Occasion');
+
+    fireEvent.change(dateInput, { target: { value: '2023-12-01' } });
+    fireEvent.click(submitButton);
+    expect(submitButton).toBeDisabled();
+
+    fireEvent.change(timeSelect, { target: { value: '12:00' } });
+    fireEvent.click(submitButton);
+    expect(submitButton).toBeDisabled();
+
+    fireEvent.change(guestsInput, { target: { value: '2' } });
+    fireEvent.click(submitButton);
+    expect(submitButton).toBeDisabled();
+
+    fireEvent.change(occasionSelect, { target: { value: 'Birthday' } });
+    fireEvent.click(submitButton);
+    expect(submitButton).not.toBeDisabled();
+  });
 })
