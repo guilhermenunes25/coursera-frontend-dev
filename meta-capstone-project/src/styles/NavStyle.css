@@ -40,6 +40,36 @@
     color: black;
 }
 
+.nav-menu li {
+    margin-right: 1rem;
+}
+
+.nav-menu li:last-child {
+    margin-right: 4rem;
+}
+
+.nav-menu a:hover {
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.nav-menu .special {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.125rem;
+    text-decoration: none;
+    
+    color: black;
+    cursor: pointer;
+}
+
+.nav-menu .special:hover {
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+
 /*Media query */
 
 @media (max-width: 768px) {
@@ -50,6 +80,7 @@
     .logo {
         max-width: 100%;
         padding-left: 1rem;
+        margin: 0 auto;
     }
 
     .nav-menu {
@@ -58,11 +89,17 @@
     }
 
     .nav-menu li {
+        display: none; /* Hide list items on small screens */
         margin-right: 1rem;
         margin-bottom: 0.5rem;
     }
 
     .nav-menu li:last-child {
-        margin-right:0;
+        margin-right: 0;
+    }
+
+
+    .nav-menu li:hover::after {
+        opacity: 0; /* Remove underscore effect on small screens */
     }
 }
