@@ -40,19 +40,20 @@
     color: #EDEFEE;
     font-size: 1.1125rem;
     line-height: 1.5em;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
 }
 
 .reserve-a-table-button {
     font-family: 'Karla', sans-serif;
     background-color: #F4CE14;
     border-radius: 5px;
-    color: black;
+    color:  #333333;
+    text-decoration: none;
     border: none;
     padding: 1% 2%;
     font-size: 1.125rem;
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 6rem;
     transition: background-color 0.3s;
     height: 3rem;
     width: 12rem;
