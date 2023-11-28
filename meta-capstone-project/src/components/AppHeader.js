@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/HeaderStyle.css'
 import restaurantFoodImage from '../assets/restauranfood.jpg'
 
@@ -13,7 +14,9 @@ return (
                 <p className="restaurant-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p>
-                   <button className="reserve-a-table-button">Reserve a Table</button>
+                <Link to="/reservations" className="reserve-a-table-button">
+                Reserve a Table
+                </Link>
             </div>
             <div className="header-right">
             <img
