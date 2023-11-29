@@ -62,7 +62,7 @@
     font-size: 1.5rem;
     
 }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .testimonials-card {
         flex-direction: column; /* Stack cards vertically */
         align-items: center;
