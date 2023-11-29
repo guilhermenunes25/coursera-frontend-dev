@@ -16,7 +16,7 @@ export default function AppNav() {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/menu">Menu</Link></li>
         <li className="special" onClick={handleReservationsClick}>Reservations</li>
-        <li><Link to="/order-online">Order Online</Link></li>
+        <li><Link to="/delivery">Delivery</Link></li>
         <li><Link to="/login">Login</Link></li>
       </ul>
     </nav>
