@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/BookingFormStyling.css';
 
 export default function BookingForm({ availableTimes, setAvailableTimes, onSubmit }) {
   const [date, setDate] = useState('');
@@ -36,9 +37,10 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
     };
 
   return (
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+    <form className="booking-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose a date</label>
       <input
+      className='input-box'
         type="date"
         id="res-date"
         value={date}
@@ -48,6 +50,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="res-time">Choose a time</label>
       <select
+      className='input-box'
         id="res-time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
@@ -63,6 +66,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="guests">Number of guests</label>
       <input
+      className='input-box'
         type="number"
         placeholder="1"
         min="1"
@@ -75,6 +79,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="occasion">Occasion</label>
       <select
+      className='input-box'
         id="occasion"
         value={occasion}
         onChange={(e) => setOccasion(e.target.value)}
