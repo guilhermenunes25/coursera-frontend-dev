@@ -1,0 +1,26 @@
+.booking-header {
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.booking-form {
+    display: grid;
+    max-width: 30%;
+    gap: 1.5em;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 6em;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0.3em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
