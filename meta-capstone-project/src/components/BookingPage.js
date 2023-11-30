@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
+import '../styles/BookingFormStyling.css';
 import { Link, useNavigate} from 'react-router-dom';
 
 const submitAPI = async (formData) => {
@@ -68,7 +69,7 @@ export default function BookingPage() {
 
   return (
     <div>
-      <h1>Booking Page</h1>
+      <h1 className="booking-header">Booking Page</h1>
       <Link to="/">Return</Link>
       <BookingForm
         availableTimes={state.availableTimes}
