@@ -88,7 +88,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input type="submit" value="Make Your Reservation" className="submit-button" />
     </form>
   );
 }
