@@ -69,7 +69,7 @@ export default function BookingPage() {
 
   return (
     <div>
-      <h1 className="booking-header">Booking Page</h1>
+      <h1 className="booking-header">Discover the Mediterranean Magic at Little Lemon!</h1>
       <Link to="/">Return</Link>
       <BookingForm
         availableTimes={state.availableTimes}
