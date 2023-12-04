@@ -1,6 +1,9 @@
 .booking-header {
+    font-family: 'Karla', sans-serif;
     text-align: center;
     margin-top: 2.5em;
+    font-weight: bold;
+    font-size: 2.5em;
 }
 
 .booking-form {
@@ -18,9 +21,43 @@
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 0 0.3em 0.2em rgba(0, 0, 0, 0.1);
+    text-indent: 1em;
+    border: 1px solid #ccc;
+    padding-right: 1em;
 }
 
 label {
     display: block;
     margin-bottom: 0.5em;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.125em;
+}
+
+.submit-button {
+    background-color:#F4CE14;
+    font-family: 'Karla', sans-serif;
+    color: #495E57;
+    margin: 4em;
+    padding: 1em 1.25em 1em 1.25em;
+    font-size: 1.125rem;
+    border-radius: 6em;
+    cursor: pointer;
+    box-shadow: 0 0.3em 0.2em rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #495E57;
+    color: #EDEFEE;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .booking-header {
+        text-align: center;
+        margin-top: 1.5em; 
+}
+
+
 }
