@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
 import '../styles/BookingFormStyling.css';
-import { Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const submitAPI = async (formData) => {
   console.log('Form submitted successfully:', formData);
@@ -58,7 +58,7 @@ export default function BookingPage() {
       const apiResponse = await submitAPI(formData);
       if (apiResponse) {
         alert('Booking submitted successfully!');
-        navigate('/reservations/confirmed')
+        navigate('/reservations/confirmed');
       } else {
         console.error('Booking submission failed.');
       }
@@ -70,7 +70,6 @@ export default function BookingPage() {
   return (
     <div>
       <h1 className="booking-header">Discover the Mediterranean Magic at Little Lemon!</h1>
-      <Link to="/">Return</Link>
       <BookingForm
         availableTimes={state.availableTimes}
         setAvailableTimes={(selectedDate) =>
