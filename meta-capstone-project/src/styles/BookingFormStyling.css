@@ -55,9 +55,22 @@ label {
 @media (max-width: 768px) {
 
     .booking-header {
-        text-align: center;
-        margin-top: 1.5em; 
-}
+        margin: 0.5em 1.5em 0 1.5em; 
+        font-size: 2.25em;
+        padding-top: 1em;
+    }
 
+    .booking-form {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .input-box {
+        width: calc(100% - 1em);
+    }
+
+    .submit-button {
+        margin-top: 2.5em;
+    }
 
 }
