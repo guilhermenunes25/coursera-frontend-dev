@@ -5,7 +5,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
-  const [occasion, setOccasion] = useState('');
+  const [occasion, setOccasion] = useState('Birthday');
   const [isFormValid, setFormValid] = useState(false);
 
   const handleDateChange = async (e) => {
@@ -18,7 +18,12 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
   const validateForm = () => {
     const isValid = date !== '' && time !== '' && guests !== '' && occasion !== '';
     setFormValid(isValid);
-  }
+  };
+
+  const handleOccasionChange = (e) => {
+    setOccasion(e.target.value);
+    validateForm();
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,17 +35,27 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         guests,
         occasion,
       };
+      console.log('Submitting Form:', formData);
       onSubmit(formData);
+
+      // Reset form fields
+      setDate('');
+      setTime('');
+      setGuests('');
+      setOccasion('');
+
+      // Reset form validity
+      setFormValid(false);
     } else {
       console.error('Invalid form submission. Please check your inputs');
-      }
-    };
+    }
+  };
 
   return (
     <form className="booking-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose a date</label>
       <input
-      className='input-box'
+        className='input-box'
         type="date"
         id="res-date"
         value={date}
@@ -50,7 +65,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="res-time">Choose a time</label>
       <select
-      className='input-box'
+        className='input-box'
         id="res-time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
@@ -66,7 +81,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="guests">Number of guests</label>
       <input
-      className='input-box'
+        className='input-box'
         type="number"
         placeholder="1"
         min="1"
@@ -79,15 +94,16 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
 
       <label htmlFor="occasion">Occasion</label>
       <select
-      className='input-box'
+        className='input-box'
         id="occasion"
         value={occasion}
-        onChange={(e) => setOccasion(e.target.value)}
+        onChange={handleOccasionChange}
         required
       >
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
       </select>
+
       <input type="submit" value="Make Your Reservation" className="submit-button" />
     </form>
   );
