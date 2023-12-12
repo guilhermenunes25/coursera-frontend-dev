@@ -5,7 +5,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
-  const [occasion, setOccasion] = useState('Birthday');
+  const [occasion, setOccasion] = useState('');
   const [isFormValid, setFormValid] = useState(false);
 
   const handleDateChange = async (e) => {
@@ -100,6 +100,7 @@ export default function BookingForm({ availableTimes, setAvailableTimes, onSubmi
         onChange={handleOccasionChange}
         required
       >
+        <option value="" disabled>Select an occasion</option>
         <option value="Birthday">Birthday</option>
         <option value="Anniversary">Anniversary</option>
       </select>
