@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import AppFooter from './AppFooter'; 
+import { Link } from 'react-router-dom'; 
 import '../styles/ConfirmedBookingStyling.css';
 export default function ConfirmedBooking() {
 
