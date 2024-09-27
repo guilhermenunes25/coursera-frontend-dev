@@ -24,7 +24,7 @@ The primary goals of this repository are to:
 
 ## 2. Calculator React App
 * Description: A fully functional calculator application built with React.
-* Key Features: Interactive UI for performing basic arithmetic operations.
+  
 
 ## 3. HTML & CSS In-Depth
 
@@ -34,12 +34,12 @@ The primary goals of this repository are to:
 ## 4. Little Lemon Project
 
 * Description: A restaurant-themed project showcasing responsive design and interactive elements.
-* Key Features: Implementation of og:site_name meta tag for better SEO.
+  
 
 ## 5. Meta Capstone Project
 
 * Description: Final project demonstrating the culmination of skills learned throughout the course.
-* Key Features: Media query adjustments for responsiveness.
+  
 
 ## 6. Project Sandbox - Little Lemon
 
